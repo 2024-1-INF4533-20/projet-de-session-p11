@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Restaurant</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Style pour centrer horizontalement le texte dans la barre de navigation */
+        .navbar .navbar-nav {
+            width: 100%;
+            justify-content: center; /* Centre horizontalement */
+        }
+
+            .navbar .navbar-nav .nav-link {
+                text-align: center; /* Centre horizontalement le texte */
+            }
+
+        /* Style pour le rectangle vertical */
+        .panier-container {
+            background-color: #ffffff; /* Fond blanc */
+            border: 2px solid #ffffff; /* Bordures blanches */
+            border-radius: 15px; /* Coins courbés */
+            padding: 20px; /* Espacement intérieur */
+            position: absolute;
+            top: 80px; /* Aligné en haut, ajustez cette valeur selon votre préférence */
+        }
+
+        /* Style pour les items du panier */
+        .panier-item {
+            margin-bottom: 10px; /* Espacement entre les items */
+        }
+
+        /* Style pour les boutons + et - */
+        .btn-plus,
+        .btn-minus {
+            margin-left: 10px; /* Espacement entre les boutons */
+        }
+
+        /* Style pour la quantité */
+        .quantity {
+            margin: 0 10px; /* Espacement autour de la quantité */
+        }
+
+        /* Style pour le panier */
+        .cart-container {
+            background-color: #ffffff; /* Fond blanc */
+            border: 2px solid #ffffff; /* Bordures blanches */
+            border-radius: 15px; /* Coins courbés */
+            padding: 20px; /* Espacement intérieur */
+            position: absolute;
+            top: 80px; /* Aligné en haut, ajustez cette valeur selon votre préférence */
+            left: 20%; /* Aligné à gauche, ajustez cette valeur selon votre préférence */
+            width: 60%; /* Largeur du panier, ajustez cette valeur selon votre préférence */
+        }
+
+        /* Style pour les éléments du panier */
+        .cart-item {
+            margin-bottom: 10px; /* Espacement entre les éléments du panier */
+        }
+
+        /* Style pour le bouton de soumission de la commande */
+        .btn-submit {
+            margin-top: 20px; /* Espacement en haut du bouton */
+        }
+
+        /* Style pour le total de la facture */
+        .total {
+            margin-top: 20px; /* Espacement en haut du total */
+            font-weight: bold; /* Texte en gras */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="principal.html">
+            <img src="imagelogo.png" alt="Logo du Restaurant" class="logo">
+        </a>
+        <!-- Barre de navigation -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="panier.html">Panier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profil.html">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="apropos.html">À Propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu de la page de panier -->
+        <div class="cart-container">
+            <h1>Panier</h1>
+            <!-- Liste des éléments du panier avec les prix -->
+            <!-- Élément 1 -->
+            <div class="cart-item">
+                <span>Nom du Plat 1</span>
+                <span>20 CAD</span> <!-- Prix -->
+                <button class="btn btn-primary btn-plus">+</button>
+                <span class="quantity">0</span> <!-- Quantité actuelle -->
+                <button class="btn btn-secondary btn-minus">-</button>
+            </div>
+            <!-- Élément 2 -->
+            <div class="cart-item">
+                <span>Nom du Plat 2</span>
+                <span>25 CAD</span> <!-- Prix -->
+                <button class="btn btn-primary btn-plus">+</button>
+                <span class="quantity">0</span> <!-- Quantité actuelle -->
+                <button class="btn btn-secondary btn-minus">-</button>
+            </div>
+            <!-- Ajoutez d'autres éléments du panier de la même manière -->
+            <!-- Bouton de soumission de la commande -->
+            <button class="btn btn-success btn-submit">Soumettre la Commande</button>
+
+            <!-- Bouton pour supprimer toute la commande -->
+            <button class="btn btn-danger btn-remove-all">Supprimer Toute la Commande</button>
+
+            <!-- Total de la facture -->
+            <div class="total">
+                Total : 0 CAD <!-- Le total sera mis à jour dynamiquement en JavaScript -->
+            </div>
+        </div>
+
+        <!-- Reste du contenu de la page -->
+        <!-- ... -->
+        <!-- Scripts Bootstrap (si nécessaires) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
