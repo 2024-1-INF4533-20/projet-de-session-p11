@@ -1,0 +1,13 @@
+.vs/
+[Bb]in/
+[Oo]bj/
+*.csproj.nuget.dgspec.json
+*.nuget.cache
+*.csproj.FileListAbsolute.txt
+*.csprojAssemblyReference.cache
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.assets.cache
+project.assets.json
+project.nuget.cache
