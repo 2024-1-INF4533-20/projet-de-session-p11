@@ -1,0 +1,149 @@
+﻿/*BACKGROUND ET BARRE DE NAVIGATION*/
+/* Supprimer la marge par défaut du corps */
+body {
+    background-image: url('imagebackground.png');
+    /**background-size: cover;*/
+    background-position: top;
+    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+    background-color: black; /* Remplit l'espace vide avec une couleur de fond noire */
+    margin: 0; /* Supprime la marge par défaut du corps */
+    padding: 0; /* Supprime le padding par défaut du corps */
+}
+
+/* Style commun pour le texte du site */
+.site-text-style {
+    font-family: 'Arial', sans-serif; /* La police que vous voulez utiliser */
+    font-size: 16px; /* La taille de la police */
+    color: #333; /* La couleur du texte */
+    /* Ajoutez d'autres propriétés de style si nécessaire */
+}
+
+/* Styles pour le logo */
+.navbar-brand .logo {
+    height: 50px; /* ou toute autre taille appropriée */
+    /* Autres styles personnalisés pour le logo si nécessaire */
+}
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+    .navbar-nav {
+        justify-content: center;
+    }
+}
+
+.welcome-section {
+    padding-top: 100px; /* Ajustez cette valeur pour décaler vers le bas */
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    background-color: white; /* Fond blanc */
+    border-radius: 15px; /* Extrémités arrondies */
+    padding: 40px; /* Espacement intérieur */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre subtile */
+    max-width: 800px; /* Largeur maximale du cadre */
+}
+
+
+
+/* Styles Specifique à la page Menu*/
+
+
+/* Ajout de styles pour réduire l'espace autour du champ numérique */
+input[type="number"] {
+    width: 50px; /* Ajustez la largeur selon vos préférences */
+    margin-right: 5px; /* Ajoutez une marge à droite pour séparer le champ du bouton */
+}
+
+/* Ajout de styles pour le bouton Ajouter au panier */
+.addToCartButton {
+    background-color: lightgreen; /* Fond de couleur vert clair */
+    padding: 5px 10px; /* Ajustez les rembourrages selon vos préférences */
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+/* Position du cadre pour boutons items et nombre d'articles */
+.button-container {
+    margin-bottom: 10px; /* Ajustez la valeur pour contrôler l'espace entre les boutons et le contenu suivant */
+}
+/* Styles pour le cadre du menu */
+.menu-container {
+    background-color: white; /* Fond blanc */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    max-width: 600px; /* Largeur maximale du cadre (ajustez selon vos besoins) */
+    margin: auto; /* Centre le cadre horizontalement */
+    margin-top: 20px; /* Marge supérieure de 10 pixels */
+}
+/* Texte "Menu"*/
+.menu-title {
+    text-align: center;
+    font-size: 60px;
+}
+/* Texte titres items menu*/
+.menu-item {
+    font-size: 18px;
+}
+/* Styles génériques pour les cadres photo */
+.photo-frame {
+    background-size: cover; /* Ajustez la taille de l'image pour remplir le conteneur */
+    background-position: center; /* Centrez l'image horizontalement et verticalement */
+    /* Autres styles personnalisés si nécessaires */
+    border-radius: 50px; /* Coins courbés du cadre */
+    padding: 20px; /* Espacement intérieur pour le contenu du cadre */
+    width: 200px; /* Largeur souhaitée */
+    height: 200px; /* Hauteur souhaitée */
+}
+
+
+
+
+
+/* Styles pour la fenêtre modale */
+#addToCartModal {
+    position: fixed; /* Position fixe pour rester en bas de la page */
+    bottom: 0; /* Position au bas de la page */
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9999; /* Assurez-vous que la fenêtre modale est au-dessus du contenu */
+    background-color: white; /* Fond blanc */
+    border-top: 1px solid #ccc; /* Bordure supérieure pour séparation */
+    padding: 20px; /* Espacement intérieur */
+}
+
+    /* Styles pour le bouton "Continuer vos achats" dans la fenêtre modale */
+    #addToCartModal button:first-child {
+        background-color: lightgreen; /* Fond de couleur vert clair */
+        padding: 5px 10px; /* Ajustez les rembourrages selon vos préférences */
+        border: none;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+        margin-right: 10px; /* Ajustez l'espacement entre les boutons */
+    }
+
+        #addToCartModal button:first-child:hover {
+            background-color: darkgreen;
+        }
+
+    /* Styles pour le bouton "Finaliser la commande" dans la fenêtre modale */
+    #addToCartModal button:last-child {
+        background-color: lightgreen; /* Fond de couleur vert clair */
+        padding: 5px 10px; /* Ajustez les rembourrages selon vos préférences */
+        border: none;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+    }
+
+        #addToCartModal button:last-child:hover {
+            background-color: darkgreen;
+        }

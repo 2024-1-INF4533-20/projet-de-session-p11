@@ -1,0 +1,115 @@
+﻿
+/**** BASE DE LA PAGE - COMMUN A TOUTE LES PAGES*/
+/* Supprimer la marge par défaut du corps */
+body {
+    background-image: url('imagebackground.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+    background-color: black; /* Remplit l'espace vide avec une couleur de fond noire */
+    margin: 0; /* Supprime la marge par défaut du corps */
+    padding: 0; /* Supprime le padding par défaut du corps */
+}
+
+/* Style commun pour le texte du site */
+.site-text-style {
+    font-family: 'Arial', sans-serif; /* La police que vous voulez utiliser */
+    font-size: 16px; /* La taille de la police */
+    color: #333; /* La couleur du texte */
+    /* Ajoutez d'autres propriétés de style si nécessaire */
+}
+
+/* Styles pour le logo */
+.navbar-brand .logo {
+    height: 50px; /* ou toute autre taille appropriée */
+    /* Autres styles personnalisés pour le logo si nécessaire */
+}
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+    .navbar-nav {
+        justify-content: center;
+    }
+}
+
+.welcome-section {
+    padding-top: 100px; /* Ajustez cette valeur pour décaler vers le bas */
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    background-color: white; /* Fond blanc */
+    border-radius: 15px; /* Extrémités arrondies */
+    padding: 40px; /* Espacement intérieur */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre subtile */
+    max-width: 800px; /* Largeur maximale du cadre */
+}
+
+/*CSS SPECIFIQUE PAGE PANIER*/
+/* Styles pour la page Panier */
+.cart-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white; /* Ajout du fond blanc */
+    border-radius: 10px; /* Coins arrondis du cadre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    margin-top: 20px; /* Ajout de la marge supérieure */
+}
+
+    .cart-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+#cart-items-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+}
+.item-info {
+    display: flex;
+    align-items: center;
+}
+
+.item-title {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Boutons */
+button {
+    background-color: #4E4D58;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+/* Styles pour le nombre d'articles avec cadre */
+.quantity-frame {
+    border: 5px solid #4E4D58; /* Bordure autour du nombre d'articles */
+    padding: 5px; /* Espacement à l'intérieur de la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    margin: 0 5px; /* Marge autour du cadre */
+}

@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Votre Restaurant</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesPanier.css">
+    <script src="panier.js"></script>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="main.html">
+            <img src="imagelogo.png" alt="Logo du Restaurant" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="panier.html">Panier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profil.html">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">À Propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Contenu de la page Panier -->
+    <div class="cart-container">
+        <h1>Votre Panier</h1>
+        <ul id="cart-items-list">
+            <!-- Exemple d'article avec boutons d'ajout et de réduction de quantité -->
+            <li>
+                <span>Pizza Margherita</span>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantityPizza(this)">-</button>
+                    <span id="quantityPizza" class="quantity-frame">1</span>
+                    <button onclick="increaseQuantityPizza(this)">+</button>
+                </div>
+                
+            </li>
+            <li>
+                <span>Filet Mignon</span>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantityFilet(this)">-</button>
+                    <span id="quantityFilet" class="quantity-frame"">1</span>
+                    <button onclick="increaseQuantityFilet(this)">+</button>
+                </div>
+            </li>
+            <li>
+                <span>Pâtes Alfredo</span>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantityPates(this)">-</button>
+                    <span id="quantityPates" class="quantity-frame">1</span>
+                    <button onclick="increaseQuantityPates(this)">+</button>
+                </div>
+            </li>
+            <!-- Ajoutez d'autres articles de la même manière -->
+        </ul>
+
+        <!-- Message pour un panier vide -->
+        <p id="empty-cart-message" style="display: none;">Votre panier est vide.</p>
+
+        <!-- Bouton pour supprimer toute la commande -->
+        <button onclick="clearCart()">Supprimer la commande</button>
+
+        <!-- Bouton pour soumettre la commande -->
+        <a href="payment.html">
+            <button onclick="submitOrder()">Soumettre la commande</button>
+        </a>
+    </div>
+
+
+
+
+<!--
+
+    Scripts JavaScript 
+    <script>
+        // Panier virtuel (tableau pour stocker les articles et leurs quantités)
+        var cart = [
+            { item: "Pizza Margherita", quantity: 1 },
+            // Ajoutez d'autres articles avec leurs quantités initiales
+        ];
+
+        // Fonction pour afficher les articles dans le panier
+        function displayCartItems() {
+            var cartItemsList = document.getElementById('cart-items-list');
+            var emptyCartMessage = document.getElementById('empty-cart-message');
+
+            // Vérifiez si le panier virtuel contient des articles
+            if (cart.length > 0) {
+                // Affichez les articles dans la liste
+                cartItemsList.innerHTML = '';
+                cart.forEach(function(itemObj) {
+                    var li = document.createElement('li');
+                    li.innerHTML = `
+                        <span>${itemObj.item}</span>
+                        <button onclick="decreaseQuantity(this)">-</button>
+                        <span id="${itemObj.item.replace(' ', '-')}Quantity">${itemObj.quantity}</span>
+                        <button onclick="increaseQuantity(this)">+</button>
+                    `;
+                    cartItemsList.appendChild(li);
+                });
+
+                // Masquez le message de panier vide
+                emptyCartMessage.style.display = 'none';
+            } else {
+                // Affichez le message de panier vide et masquez la liste
+                cartItemsList.innerHTML = '';
+                emptyCartMessage.style.display = 'block';
+            }
+        }
+
+       // Fonction pour augmenter la quantité de la Pizza Margherita
+function increaseQuantityPizza(button) {
+    var itemObj = cart.find(item => item.item === 'Pizza Margherita');
+    if (itemObj) {
+        itemObj.quantity++;
+        displayCartItems(); // Mettez à jour l'affichage après l'augmentation
+    }
+}
+
+// Fonction pour réduire la quantité de la Pizza Margherita
+function decreaseQuantityPizza(button) {
+    var itemObj = cart.find(item => item.item === 'Pizza Margherita');
+    if (itemObj && itemObj.quantity > 1) {
+        itemObj.quantity--;
+        displayCartItems(); // Mettez à jour l'affichage après la réduction
+    }
+}
+
+       // Fonction pour augmenter la quantité de Filet Mignon
+function increaseQuantityFilet(button) {
+    var itemObj = cart.find(item => item.item === 'Filet Mignon');
+    if (itemObj) {
+        itemObj.quantity++;
+        displayCartItems(); // Mettez à jour l'affichage après l'augmentation
+    }
+}
+
+// Fonction pour réduire la quantité de Filet Mignon
+function decreaseQuantityFilet(button) {
+    var itemObj = cart.find(item => item.item === 'Filet Mignon');
+    if (itemObj && itemObj.quantity > 1) {
+        itemObj.quantity--;
+        displayCartItems(); // Mettez à jour l'affichage après la réduction
+    }
+}
+       // Fonction pour augmenter la quantité de Pâtes Alfredo
+function increaseQuantityPates(button) {
+    var itemObj = cart.find(item => item.item === 'Pâtes Alfredo');
+    if (itemObj) {
+        itemObj.quantity++;
+        displayCartItems(); // Mettez à jour l'affichage après l'augmentation
+    }
+}
+
+// Fonction pour réduire la quantité de Pâtes Alfredo
+function decreaseQuantityPates(button) {
+    var itemObj = cart.find(item => item.item === 'Pâtes Alfredo');
+    if (itemObj && itemObj.quantity > 1) {
+        itemObj.quantity--;
+        displayCartItems(); // Mettez à jour l'affichage après la réduction
+    }
+}
+
+// Répétez ces fonctions pour d'autres articles en utilisant leurs noms respectifs
+
+        // Fonction pour supprimer toute la commande
+        function clearCart() {
+            cart = [];
+            displayCartItems(); // Mettez à jour l'affichage après la suppression
+        }
+
+        // Fonction pour soumettre la commande
+        function submitOrder() {
+            // Ajoutez votre logique pour finaliser la commande ici
+        }
+
+        // Appel de la fonction pour afficher les articles dans le panier
+        displayCartItems();
+    </script>
+
+-->
+
+
+    <!-- Scripts Bootstrap (si nécessaires) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
