@@ -1,4 +1,5 @@
-﻿/*******************************************************/
+
+/*******************************************************/
 /************** CSS COMMON TO ALL PAGES ***************/
 /*****************************************************/
 body {
@@ -76,6 +77,49 @@ body {
     max-width: 800px;
     margin: auto;
 }
+/* icone rouge du Panier*/
+.cart-icon {
+    background-color: red;
+    color: white;
+    border-radius: 50%; /* Rend l'icône circulaire */
+    padding: 2px 8px; /* Ajustez selon la taille désirée */
+    font-size: 14px; /* Ajustez selon la taille désirée */
+    position: relative;
+    top: -10px; /* Ajustez pour aligner verticalement */
+    right: -10px; /* Ajustez pour aligner horizontalement */
+    display: inline-block;
+}
 /*******************************************************/
 /************** FIN . CSS COMMON TO ALL PAGES ***************/
 /*****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin-top: 100px; /* Ajustez cette valeur en fonction de la hauteur de votre barre de navigation */
+    color: white; /* Couleur du texte en blanc */
+    text-align: center; /* Centrer tout le texte */
+}
+h2 {
+    color: #757171; /* Couleur de gris lisible */
+}
+button {
+    background-color: green; /* Bouton de couleur verte */
+    color: white; /* Couleur du texte en blanc */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Arrondir les coins */
+    cursor: pointer; /* Afficher le curseur de la souris */
+    margin-top: 20px; /* Marge supérieure pour le bouton */
+}
