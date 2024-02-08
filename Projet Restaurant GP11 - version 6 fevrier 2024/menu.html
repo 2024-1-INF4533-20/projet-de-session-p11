@@ -22,7 +22,7 @@
                     <a class="nav-link" href="menu.html">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="panier.html">Panier</a>
+                    <a class="nav-link" href="panier.html">Panier <span id="cart-count" class="cart-icon">0</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="profil.html">Profil</a>
@@ -50,7 +50,7 @@
                     <br />
                     <p class="description">Une délicieuse salade César préparée avec des ingrédients frais et une sauce crémeuse.  $8.99 </p>
                     <div class="button-container">
-                        <input type="number" id="quantitySalade" value="1" min="1">
+                        <input type="number" id="quantitySalade" value="0" min="0">
                         <button onclick="showAddToCartModal('Salade César', 'quantitySalade')" class="addToCartButton">Ajouter au panier</button>
                     </div>
                 </li>
@@ -59,7 +59,7 @@
                     <div class="photo-frame" style="background-image: url('soupe-oignon.jpg');"></div>
                     <p class="description">La soupe à l'oignon est une délicieuse soupe française préparée avec des oignons caramélisés, du bouillon et garnie de croûtons de pain et de fromage fondu.  $6.99</p>
                     <div class="button-container">
-                        <input type="number" id="quantitySoupe" value="1" min="1">
+                        <input type="number" id="quantitySoupe" value="0" min="0">
                         <button onclick="showAddToCartModal('Soupe à l\'oignon', 'quantitySoupe')" class="addToCartButton">Ajouter au panier</button>
                     </div>
                 </li>
@@ -75,7 +75,7 @@
                     <br />
                     <p class="description">Un filet mignon tendre et juteux, grillé à la perfection pour une expérience de viande de qualité supérieure.  $24.99 </p>
                     <div class="button-container">
-                        <input type="number" id="quantitySoupe" value="1" min="1">
+                        <input type="number" id="quantitySoupe" value="0" min="0">
                         <button onclick="showAddToCartModal('Filet Mignon', 'quantityFilet')" class="addToCartButton">Ajouter au panier</button>
                     </div>
                 </li>
@@ -86,7 +86,7 @@
                     <br />
                     <p class="description">Des pâtes crémeuses avec une sauce Alfredo onctueuse, garnies de parmesan râpé et de persil frais.  $12.99 </p>
                     <div class="button-container">
-                        <input type="number" id="quantitySoupe" value="1" min="1">
+                        <input type="number" id="quantitySoupe" value="0" min="0">
                         <button onclick="showAddToCartModal('Pâtes Alfredo', 'quantityPates')" class="addToCartButton">Ajouter au panier</button>
                     </div>
                 </li>
@@ -96,7 +96,7 @@
                     <br />
                     <p class="description">Une part de pizza Margherita avec sa croûte fine, sauce tomate, mozzarella fondante et une touche de basilic frais.  $10.99 </p>
                     <div class="button-container">
-                        <input type="number" id="quantitySoupe" value="1" min="1">
+                        <input type="number" id="quantitySoupe" value="0" min="0">
                         <button onclick="showAddToCartModal('Pizza Margherita', 'quantityPizza')" class="addToCartButton">Ajouter au panier</button>
                     </div>
                 </li>
@@ -118,8 +118,23 @@
 
 
     
+
+
+
         <script>
-        function showAddToCartModal(item, quantityId) {
+            function showAddToCartModal(item, quantityId) {
+                var quantity = document.getElementById(quantityId).value;
+                // Affiche une alerte popup avec la quantité et l'article ajouté(s) au panier
+                alert(quantity + " " + item + "(s) ajouté(s) au panier !");
+
+                // Ligne suivante commentée pour ne pas afficher la fenêtre modale
+                // document.getElementById('addToCartModal').style.display = 'block';
+}
+
+
+
+
+        /*function showAddToCartModal(item, quantityId) {
             var quantity = document.getElementById(quantityId).value;
             // Affiche la fenêtre modale avec la quantité choisie
             document.getElementById('addToCartModal').style.display = 'block';
@@ -135,7 +150,7 @@
         function finalizeOrder() {
             // Redirige l'utilisateur vers la page de finalisation de commande
             window.location.href = 'checkout.html';
-        }
+        }*/
         </script>
     
 

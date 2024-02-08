@@ -1,50 +1,97 @@
-﻿
-/**** BASE DE LA PAGE - COMMUN A TOUTE LES PAGES*/
-/* Supprimer la marge par défaut du corps */
+﻿/*******************************************************/
+/************** CSS COMMON TO ALL PAGES ***************/
+/*****************************************************/
 body {
+    padding-top: 70px; /* Adjust this value based on the actual height of your navbar */
     background-image: url('imagebackground.png');
-    background-size: cover;
     background-position: top;
-    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
-    background-color: black; /* Remplit l'espace vide avec une couleur de fond noire */
-    margin: 0; /* Supprime la marge par défaut du corps */
-    padding: 0; /* Supprime le padding par défaut du corps */
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
-/* Style commun pour le texte du site */
-.site-text-style {
-    font-family: 'Arial', sans-serif; /* La police que vous voulez utiliser */
-    font-size: 16px; /* La taille de la police */
-    color: #333; /* La couleur du texte */
-    /* Ajoutez d'autres propriétés de style si nécessaire */
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030; /* High z-index to ensure it stays on top of other content */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #fff; /* Ensure navbar background is not transparent */
 }
 
-/* Styles pour le logo */
+.navbar-collapse {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+/* Logo Styles */
 .navbar-brand .logo {
-    height: 50px; /* ou toute autre taille appropriée */
-    /* Autres styles personnalisés pour le logo si nécessaire */
+    height: 50px;
 }
 
-/* Responsive Navbar */
+/* Responsive Adjustments */
 @media (max-width: 992px) {
     .navbar-nav {
+        display: flex;
         justify-content: center;
+        width: 100%;
     }
 }
 
+/* Text Styles */
+.site-text-style {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Welcome Section */
 .welcome-section {
-    padding-top: 100px; /* Ajustez cette valeur pour décaler vers le bas */
+    padding-top: 100px;
     display: flex;
     justify-content: center;
 }
 
+/* Content Container */
 .content-container {
-    background-color: white; /* Fond blanc */
-    border-radius: 15px; /* Extrémités arrondies */
-    padding: 40px; /* Espacement intérieur */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre subtile */
-    max-width: 800px; /* Largeur maximale du cadre */
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
 }
+/* icone rouge du Panier*/
+.cart-icon {
+    background-color: red;
+    color: white;
+    border-radius: 50%; /* Rend l'icône circulaire */
+    padding: 2px 8px; /* Ajustez selon la taille désirée */
+    font-size: 14px; /* Ajustez selon la taille désirée */
+    position: relative;
+    top: -10px; /* Ajustez pour aligner verticalement */
+    right: -10px; /* Ajustez pour aligner horizontalement */
+    display: inline-block;
+}
+/*******************************************************/
+/************** FIN . CSS COMMON TO ALL PAGES ***************/
+/*****************************************************/
+
 
 /*CSS SPECIFIQUE PAGE PANIER*/
 /* Styles pour la page Panier */
@@ -56,7 +103,7 @@ body {
     background-color: white; /* Ajout du fond blanc */
     border-radius: 10px; /* Coins arrondis du cadre */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
-    margin-top: 20px; /* Ajout de la marge supérieure */
+    margin-top: 100px; /* Ajout de la marge supérieure */
 }
 
     .cart-container h1 {
