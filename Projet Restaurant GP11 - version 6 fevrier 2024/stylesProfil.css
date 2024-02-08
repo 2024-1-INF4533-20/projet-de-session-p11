@@ -1,6 +1,4 @@
-﻿/*******************************************************/
-/************** CSS COMMON TO ALL PAGES ***************/
-/*****************************************************/
+
 body {
     padding-top: 70px; /* Adjust this value based on the actual height of your navbar */
     background-image: url('imagebackground.png');
@@ -17,12 +15,12 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1030; /* High z-index to ensure it stays on top of other content */
+    z-index: 1030; 
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    background-color: #fff; /* Ensure navbar background is not transparent */
+    background-color: #fff;  
 }
 
 .navbar-collapse {
@@ -88,6 +86,25 @@ body {
     right: -10px; /* Ajustez pour aligner horizontalement */
     display: inline-block;
 }
-/*******************************************************/
-/************** FIN . CSS COMMON TO ALL PAGES ***************/
-/*****************************************************/
+/* Login Container Styles */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 100px; /* Adjust as needed */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Style for the logout button container */
+.logout-container {
+    position: fixed;
+    bottom: 20px; /* Adjust position from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
