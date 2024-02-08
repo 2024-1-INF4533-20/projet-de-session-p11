@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -33,18 +33,35 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contacts</a>
                 </li>
+                
             </ul>
         </div>
     </nav>
+     <!-- Login Section -->
+     <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+                <button id="loginButton" class="btn btn-primary" type="submit">Login</button>
+                <button id="logoutButton" class="btn btn-danger" style="display: none;" type="button">Logout</button>
+            </div>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Create one</a></p>
+    </div>
 
-
-
-
-
-
-    <!-- Scripts Bootstrap (si nécessaires) -->
+    <!-- Scripts Bootstrap (if necessary) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
