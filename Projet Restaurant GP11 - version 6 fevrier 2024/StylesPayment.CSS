@@ -1,0 +1,16 @@
+body {
+    color: white; /* Couleur du texte en blanc */
+    text-align: center; /* Centrer tout le texte */
+}
+h2 {
+    color: #757171; /* Couleur de gris lisible */
+}
+button {
+    background-color: green; /* Bouton de couleur verte */
+    color: white; /* Couleur du texte en blanc */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Arrondir les coins */
+    cursor: pointer; /* Afficher le curseur de la souris */
+    margin-top: 20px; /* Marge supérieure pour le bouton */
+}
