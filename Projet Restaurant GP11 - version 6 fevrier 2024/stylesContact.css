@@ -88,6 +88,24 @@ body {
     right: -10px; /* Ajustez pour aligner horizontalement */
     display: inline-block;
 }
+
+body {
+    text-align: center; /* Centrer tout le texte */
+}
+
+form {
+    display: inline-block; /* Pour centrer le formulaire */
+}
+
+button[type="submit"] {
+    background-color: rgb(14, 159, 14); /* Bouton "Envoyer" en vert */
+    color: rgb(255, 255, 255); /* Couleur du texte en blanc */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Arrondir les coins */
+    cursor: pointer; /* Afficher le curseur de la souris */
+}
+
 /*******************************************************/
 /************** FIN . CSS COMMON TO ALL PAGES ***************/
 /*****************************************************/
