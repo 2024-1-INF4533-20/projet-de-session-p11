@@ -91,6 +91,7 @@ body {
 
 body {
     text-align: center; /* Centrer tout le texte */
+    color: rgb(210, 210, 210); /* Couleur du texte en blanc */
 }
 
 form {
@@ -98,8 +99,8 @@ form {
 }
 
 button[type="submit"] {
-    background-color: rgb(14, 159, 14); /* Bouton "Envoyer" en vert */
-    color: rgb(255, 255, 255); /* Couleur du texte en blanc */
+    background-color: green; /* Bouton "Envoyer" en vert */
+    color: rgb(177, 165, 165); /* Couleur du texte en blanc */
     padding: 10px 20px; /* Espacement intérieur du bouton */
     border: none; /* Supprimer la bordure */
     border-radius: 5px; /* Arrondir les coins */
