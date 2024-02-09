@@ -87,6 +87,19 @@ body {
     right: -10px; /* Ajustez pour aligner horizontalement */
     display: inline-block;
 }
+
+
+body {
+    text-align: center; /* Centrer tout le texte */
+    color: white; /* Couleur du texte en blanc */
+}
+
+h2 {
+    color: beige; /* Couleur du titre en beige */
+    text-decoration: underline; /* Souligner le titre */
+    text-align: center; /* Aligner le titre à gauche */
+}
+
 /*******************************************************/
 /************** FIN . CSS COMMON TO ALL PAGES ***************/
 /*****************************************************/
