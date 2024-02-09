@@ -1,0 +1,64 @@
+# Dossiers de configuration de Visual Studio
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Dossiers de build et de binaires
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Fichiers de packages
+*.nupkg
+# Le dossier "packages" peut être généré par des restaurations NuGet
+# Commentez la ligne suivante si vous suivez les packages NuGet
+packages/
+
+# Fichiers de cache de résilience Visual Studio
+.vspscc
+*.vssscc
+
+# Autres fichiers et dossiers à ignorer
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]pp[Pp]ublish/
+[Ss]ql/
+[Tt]est[Rr]esult*/
+*.log
+*.sqlproj.user
+*.cache
+*.trx
+*.pdb
+*.vsp
+*.testsettings
+*.vsmdi
+ipch/
+*.dbmdl
+*.jfm
+node_modules/
+*.bak
+*.tmp
+*.[Pp]ublish.xml
+*.opendb
+*.unsuccessfulbuild
+Thumbs.db
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.swp
+*.vspx
+*.userprefs
+*.csproj.user
+*.vbproj.user
