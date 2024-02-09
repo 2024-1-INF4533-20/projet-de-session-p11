@@ -1,0 +1,174 @@
+﻿/*******************************************************/
+/************** CSS COMMON TO ALL PAGES ***************/
+/*****************************************************/
+body {
+    padding-top: 30px; /* Adjust this value based on the actual height of your navbar */
+    background-image: url('imagebackground.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030; /* High z-index to ensure it stays on top of other content */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #fff; /* Ensure navbar background is not transparent */
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+/* Logo Styles */
+.navbar-brand .logo {
+    height: 50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Text Styles */
+.site-text-style {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Content Container */
+.content-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+/* icone rouge du Panier*/
+.cart-icon {
+    background-color: red;
+    color: white;
+    border-radius: 50%; /* Rend l'icône circulaire */
+    padding: 2px 8px; /* Ajustez selon la taille désirée */
+    font-size: 14px; /* Ajustez selon la taille désirée */
+    position: relative;
+    top: -10px; /* Ajustez pour aligner verticalement */
+    right: -10px; /* Ajustez pour aligner horizontalement */
+    display: inline-block;
+}
+
+/*******************************************************/
+/************** FIN . CSS COMMON TO ALL PAGES ***************/
+/*****************************************************/
+
+
+
+
+
+/* Menu Specific Styles */
+input[type="number"] {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.addToCartButton {
+    background-color: #5a6d71;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+.button-container {
+    margin-bottom: 10px;
+}
+
+.menu-container {
+    background-color: white; /* Fond blanc */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    max-width: 600px; /* Largeur maximale du cadre */
+    margin: auto; /* Centre le cadre horizontalement */
+    margin-top: 100px; /* Ajusté pour descendre le cadre en dessous de la barre de navigation */
+    /* Autres styles */
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 60px;
+}
+
+.menu-item {
+    font-size: 18px;
+}
+
+/* Photo Frame Styles */
+.photo-frame {
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+/**//* Modal Styles 
+#addToCartModal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9999;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+}
+
+    #addToCartModal button {
+        background-color: lightgreen;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+        #addToCartModal button:hover {
+            background-color: darkgreen;
+        }
+        */

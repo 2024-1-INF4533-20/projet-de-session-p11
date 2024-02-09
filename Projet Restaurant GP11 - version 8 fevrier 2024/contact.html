@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Restaurant GP11</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesContact.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="main.html">
+            <img src="imagelogo.png" alt="Logo du Restaurant" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="panier.html">Panier <span id="cart-count" class="cart-icon">0</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profil.html">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">À Propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="contacts-container">
+        <h1>Contactez-nous</h1>
+        <p>Votre opinion compte beaucoup pour nous. Vous pouvez nous envoyer un message pour nous donner votre feedback.</p>
+
+
+        <form>
+            <label for="nom">Nom :</label><br>
+            <input type="text" id="nom" name="nom"><br><br>
+
+            <label for="email">Adresse courriel :</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="4" cols="25"></textarea><br><br>
+
+            <input type="submit" value="Envoyer">
+        </form>
+
+        <!-- <p>Vous pouvez aussi nous appeler au 819 000-0000</p> -->
+
+    </div>
+
+
+    <!-- Scripts Bootstrap (si nécessaires) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
