@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil - Restaurant GP11</title>
+    <title>Profil - Votre Restaurant</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesProfil.css">
+    <link rel="stylesheet" type="text/css" href="stylesprofil.css">
+    <style>
+        /* Additional styling for input fields */
+        input[type="text"],
+        input[type="password"] {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- Barre de navigation -->
@@ -33,35 +40,96 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contacts</a>
                 </li>
-
             </ul>
         </div>
     </nav>
-    <!-- Login Section -->
+
     <div class="login-container">
-        <h2>Connectez-vous</h2>
-        <form>
-            <div class="form-group">
-                <label for="email">Courriel:</label>
-                <input type="email" class="form-control" id="email" placeholder="Entrer courriel">
-            </div>
-            <div class="form-group">
-                <label for="password">Mot de passe:</label>
-                <input type="password" class="form-control" id="Mot de passe" placeholder="Entrer mot de passe">
-            </div>
-            <div class="form-group">
-                <a href="historique.html" class="btn btn-primary custom-login-btn" role="button">Connectez-vous</a>
-            </div>
+        <h2 id="profileTitle" style="display:none;">Profile</h2>
+        <div id="userInfo" style="display:none;"></div>
+        <button id="editBtn" style="display:none;" class="edit-btn">Edit</button>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <input type="submit" value="Login">
         </form>
-        <p>Pas de compte? <a href="signup.html">Inscrivez-vous</a></p>
+        <button id="logoutBtn" style="display:none;" class="logout-btn">Logout</button>
+        <a href="create.html"><button id="createAccountBtn" style="margin-top: 20px;">Create Account</button></a>
     </div>
 
-
-    <!-- Scripts Bootstrap (if necessary) -->
+    <!-- Scripts Bootstrap (si nécessaires) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+
+    <script>
+        // Define user credentials and information
+        const users = [
+            { "username": "user1", "password": "password1", "name": "John Doe", "dob": "1990-01-01", "email": "john@example.com", "address": "123 Main St, City, Country", "phone": "123-456-7890" },
+            { "username": "user2", "password": "password2", "name": "Jane Smith", "dob": "1995-05-15", "email": "jane@example.com", "address": "456 Elm St, Town, Country", "phone": "987-654-3210" },
+            { "username": "user3", "password": "password3", "name": "Alice Johnson", "dob": "1988-10-20", "email": "alice@example.com", "address": "789 Oak St, Village, Country", "phone": "456-789-0123" }
+        ];
+
+        // Check if there is a logged-in user and display the profile
+        const loggedInUser = localStorage.getItem("loggedInUser");
+        if (loggedInUser) {
+            const user = JSON.parse(loggedInUser);
+            displayProfile(user);
+        }
+
+        // Display user profile
+        function displayProfile(user) {
+            // Hide login form and create account button
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("createAccountBtn").style.display = "none";
+
+            // Show profile information
+            document.getElementById("profileTitle").style.display = "block";
+            document.getElementById("userInfo").innerHTML = `
+                <p>Name: <span id="userName">${user.name}</span></p>
+                <p>Date of Birth: <span id="userDob">${user.dob}</span></p>
+                <p>Email: <span id="userEmail">${user.email}</span></p>
+                <p>Address: <span id="userAddress">${user.address}</span></p>
+                <p>Phone: <span id="userPhone">${user.phone}</span></p>`;
+            document.getElementById("userInfo").style.display = "block";
+            document.getElementById("editBtn").style.display = "block";
+            document.getElementById("logoutBtn").style.display = "block";
+        }
+
+        // Logout function
+        function logout() {
+            // Clear local storage and reload the page
+            localStorage.removeItem("loggedInUser");
+            location.reload();
+        }
+
+        // Show create account form when the button is clicked
+        document.getElementById("createAccountBtn").addEventListener("click", function() {
+            document.getElementById("createAccountTitle").style.display = "block";
+            document.getElementById("createAccountForm").style.display = "block";
+        });
+
+        // Handle form submission for creating an account
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check if the entered username and password match any user in the users array
+            const user = users.find(u => u.username === username && u.password === password);
+
+            if (user) {
+                // Store the logged-in user in local storage
+                localStorage.setItem("loggedInUser", JSON.stringify(user));
+                // Display the user profile
+                displayProfile(user);
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+
+        // Logout when the logout button is clicked
+        document.getElementById("logoutBtn").addEventListener("click", logout);
+    </script>
 </body>
 </html>
