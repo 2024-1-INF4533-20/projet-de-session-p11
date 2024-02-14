@@ -1,6 +1,4 @@
-/*******************************************************/
-/************** CSS COMMON TO ALL PAGES ***************/
-/*****************************************************/
+
 body {
     padding-top: 70px; /* Adjust this value based on the actual height of your navbar */
     background-image: url('imagebackground.png');
@@ -8,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-color: black;
     margin: 0;
+    padding: 0;
 }
 
 /* Navbar Styles */
@@ -87,39 +86,65 @@ body {
     right: -10px; /* Ajustez pour aligner horizontalement */
     display: inline-block;
 }
-/*******************************************************/
-/************** FIN . CSS COMMON TO ALL PAGES ***************/
-/*****************************************************/
-
 /* Login Container Styles */
-.login-container {
-    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('imagebackground.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+  
+  .login-container {
+    background-color: rgba(234, 238, 241, 0.885); /* Gray with 50% opacity */
     border-radius: 10px;
-    padding: 20px;
-    max-width: 400px;
+    padding: 40px;
+    width: 400px;
     margin: auto;
     margin-top: 100px; /* Adjust as needed */
-}
-
-.login-container h2 {
+  }
+  
+  .login-container h2 {
     text-align: center;
-    margin-bottom: 20px;
-}
-/* Style for the logout button container */
-.logout-container {
-    position: fixed;
-    bottom: 20px; /* Adjust position from the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Styles spécifiques pour le bouton de connexion personnalisé */
-.custom-login-btn {
-    background-color: #5a6d71; 
-    border-color: #000000; /* Bordure plus foncée pour le bouton */
-}
-
-    .custom-login-btn:hover {
-        background-color: #1b3134; 
-        border-color: #000000; /* Bordure au survol */
-    }
+    margin-bottom: 40px;
+  }
+  
+  form {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #f9fafa;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #393a4a;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #413f53;
+  }
+  
+  .logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: none;
+  }
+  
