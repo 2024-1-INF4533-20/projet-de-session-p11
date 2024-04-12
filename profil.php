@@ -1,8 +1,8 @@
 <?php
 // Informations de connexion à la base de données pour XAMPP
 $servername = "localhost";
-$username = ""; // Laissez-le vide ou utilisez "root" si vous n'avez pas changé le nom d'utilisateur par défaut.
-$password = ""; // Laissez-le vide ou utilisez "" si vous n'avez pas défini de mot de passe pour MySQL.
+$username = "root"; // Utilisez "root" si vous n'avez pas changé le nom d'utilisateur par défaut.
+$password = ""; // Laissez-le vide si vous n'avez pas défini de mot de passe pour MySQL.
 $database = "db"; // Nom de votre base de données.
 
 // Connexion à la base de données
@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Restaurant du coin </title>
+    <title>Restaurant du coin</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesprofil.css">
     <style>
@@ -36,11 +36,21 @@ if ($conn->connect_error) {
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- Vos éléments de navigation ici -->
+        <a class="navbar-brand" href="#">Restaurant du coin</a>
     </nav>
 
     <!-- Contenu de la page -->
-    <div class="login-container">
-        <!-- Votre formulaire de connexion ici -->
+    <div class="container">
+        <div class="login-container">
+            <h2>Connexion</h2>
+            <!-- Votre formulaire de connexion ici -->
+            <form method="post" action="login.php">
+                <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                <button type="submit" class="btn btn-primary">Se connecter</button>
+            </form>
+            <!-- Afficher un message d'erreur ici si nécessaire -->
+        </div>
     </div>
 
     <!-- Scripts Bootstrap (si nécessaires) -->
