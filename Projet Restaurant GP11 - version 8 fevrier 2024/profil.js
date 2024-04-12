@@ -1,9 +1,9 @@
 
 // Define user credentials and information
 const users = [
-    { "username": "user1", "password": "password1", "name": "John Doe", "dob": "1990-01-01", "email": "john@example.com", "address": "123 Main St, City, Country", "phone": "123-456-7890" },
-    { "username": "user2", "password": "password2", "name": "Jane Smith", "dob": "1995-05-15", "email": "jane@example.com", "address": "456 Elm St, Town, Country", "phone": "987-654-3210" },
-    { "username": "user3", "password": "password3", "name": "Alice Johnson", "dob": "1988-10-20", "email": "alice@example.com", "address": "789 Oak St, Village, Country", "phone": "456-789-0123" }
+    { "username": "user1", "password": "password1", "name": "John ", "dob": "1990-01-01", "email": "john@example.com", "address": "123 Main St, City, Country", "phone": "123-456-7890" },
+    { "username": "user2", "password": "password2", "name": "Jane ", "dob": "1995-05-15", "email": "jane@example.com", "address": "456 Elm St, Town, Country", "phone": "987-654-3210" },
+    { "username": "user3", "password": "password3", "name": "Alice ", "dob": "1988-10-20", "email": "alice@example.com", "address": "789 Oak St, Village, Country", "phone": "456-789-0123" }
 ];
 
 // Check if there is a logged-in user and display the profile
